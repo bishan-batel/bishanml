@@ -5,6 +5,7 @@
     --accent-bg: #665c54;
     --logo-fg: #ea6962;
     --accent2-bg: #928374;
+    --project-highlight: #89b482;
 }
 
 body {
@@ -66,6 +67,7 @@ a {
     overflow: show;
     transform: translate(-45%, -100%);
     text-decoration: underline;
+    color: #d3869b;
 }
 
 .projects-container {
@@ -91,17 +93,18 @@ a {
 
 /* Project Item */
 .project-item {
+    color: var(--project-highlight);
     width: 100%;
 
     transition: all 100ms ease-in;
-    transition: width 120ms ease-in;
+    transition: transform 120ms ease-in;
 }
 
 .project-item:hover {
     background: var(--accent-bg);
     color: var(--accent);
 
-    width: 103%;
+    transform: scaleX(103%);
 }
 
 .project-item-link {

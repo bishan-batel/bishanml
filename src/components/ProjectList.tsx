@@ -2,7 +2,8 @@ import React from "react";
 
 interface ProjectItemProps {
     name: string;
-    link: string;
+    code: string;
+    link?: string;
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
@@ -16,12 +17,28 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
 };
 
 const ProjectList: React.FC = () => {
-    const items: JSX.Element[] = [];
-    
-    // Test
-    for (let i = 0; i < 100; i++) {
-        items.push(<ProjectItem name={`Project Test ${i}`} link="/" />);
-    }
+    const items: JSX.Element[] = [
+        <ProjectItem
+            name="This Website"
+            code="https://github.com/bishan-batel/bishanml"
+       />,
+        <ProjectItem
+            name="Intro Cs Notes"
+            code="https://github.com/bishan-batel/intro-cs-notes"
+       />,
+        <ProjectItem
+            name="Tic Tac Toe"
+            code="https://github.com/bishan-batel/tic-tac-toe"
+        />,
+        <ProjectItem
+            name="Pog Discord Bot"
+            code="https://github.com/bishan-batel/pogbot"
+        />,
+        <ProjectItem
+            name="Rofl Discord Bot"
+            code="https://github.com/bishan-batel/kishbot"
+        />,
+    ];
 
     return (
         <div className="projects-container">
