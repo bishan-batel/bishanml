@@ -6,7 +6,9 @@ interface ProjectItemProps {
     link?: string;
 }
 
-const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
+const ProjectItem: React.FC<ProjectItemProps> = (props) => {
+    const { name, code, link = code } = props;
+
     return (
         <li className="project-item">
             <a href={link} className="project-item-link">
@@ -19,13 +21,17 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
 const ProjectList: React.FC = () => {
     const items: JSX.Element[] = [
         <ProjectItem
+            name="snake-rs"
+            code="https://github.com/bishan-batel/snake-rs"
+        />,
+        <ProjectItem
             name="This Website"
             code="https://github.com/bishan-batel/bishanml"
-       />,
+        />,
         <ProjectItem
             name="Intro Cs Notes"
             code="https://github.com/bishan-batel/intro-cs-notes"
-       />,
+        />,
         <ProjectItem
             name="Tic Tac Toe"
             code="https://github.com/bishan-batel/tic-tac-toe"

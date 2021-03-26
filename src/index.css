@@ -93,6 +93,7 @@ a {
 
 /* Project Item */
 .project-item {
+    border: none;
     color: var(--project-highlight);
     width: 100%;
 
