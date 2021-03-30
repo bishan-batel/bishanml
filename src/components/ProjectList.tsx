@@ -12,8 +12,7 @@ const ProjectItem: React.FC<ProjectItemProps> = (props) => {
     return (
         <li className="project-item">
             <a href={link} className="project-item-link">
-                {name}
-            </a>
+                {name} </a>
         </li>
     );
 };
