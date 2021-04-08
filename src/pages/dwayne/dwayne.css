@@ -1,0 +1,26 @@
+.dwayne {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.dwayne h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.dwayne h1::after {
+  content: "";
+  border-width: 10rem;
+  border-radius: 2;
+  border-color: var(--accent);
+}
+
+.dwayne-content {
+  text-align: center;
+}
+
+.dwayne-tag-field {
+  font-size: 2rem;
+}

@@ -6,12 +6,11 @@ interface ProjectItemProps {
     link?: string;
 }
 
-const ProjectItem: React.FC<ProjectItemProps> = (props) => {
-    const { name, code, link = code } = props;
+const ProjectItem: React.FC<ProjectItemProps> = ({name, code, link}) => {
 
     return (
         <li className="project-item">
-            <a href={link} className="project-item-link">
+            <a href={link ?? code} className="project-item-link">
                 {name} </a>
         </li>
     );
@@ -19,6 +18,15 @@ const ProjectItem: React.FC<ProjectItemProps> = (props) => {
 
 const ProjectList: React.FC = () => {
     const items: JSX.Element[] = [
+        <ProjectItem
+            name="Flocking Simulation (rust)"
+            code="https://github.com/bishan-batel/flocking-sim"
+        />,
+        <ProjectItem
+            name="The Fridge"
+            code="https://github.com/bishan-batel/fridge"
+            link="https://fridge.bishan.ml"
+        />,
         <ProjectItem
             name="snake-rs"
             code="https://github.com/bishan-batel/snake-rs"
