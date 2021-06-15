@@ -1,5 +1,5 @@
 import React from "react";
-import "./dwayne.css";
+import "./dwayne.scss";
 
 const TagsField: React.FC<{ tag: string }> = ({ tag }) => {
   return <input defaultValue={tag} className="dwayne-tag-field" />;

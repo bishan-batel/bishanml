@@ -1,0 +1,52 @@
+@import "/src/index.scss";
+
+.goosepack {
+  position: absolute;
+  margin-left: 5rem;
+  width: 80%;
+  left: 50%;
+  top: 14%;
+  transform: translate(-50%, -50%);
+
+  .header {
+    font-size: 5rem;
+    color: $accent;
+  }
+
+  // Resource pack details
+  .pack-details {
+    $dist: 8rem;
+
+    position: absolute;
+    display: flex;
+    left: 25%;
+    margin-top: .1rem;
+
+    p {
+      font-size: 1.5rem;
+      width: 23rem;
+      margin-left: -40%;
+    }
+
+    .download {
+      margin-top: 2rem;
+      text-align: center;
+      margin-left: 40%;
+
+      // Button/Link
+      a {
+        text-decoration: inherit;
+        background: $logo-fg;
+        color: $bg;
+        font-size: 3rem;
+      }
+
+      // Version
+      h2 {
+        margin-top: -0.1rem;
+        color: $project-highlight;
+        font-size: 2.3rem;
+      }
+    }
+  }
+}
