@@ -4,49 +4,71 @@
   position: absolute;
   margin-left: 5rem;
   width: 80%;
-  left: 50%;
-  top: 14%;
+  left: 45%;
+  top: 36.7rem;
+  padding-bottom: 15rem;
   transform: translate(-50%, -50%);
 
   .header {
     font-size: 5rem;
-    color: $accent;
+    color: $accent-orange;
+    text-decoration: underline;
+
+    .pack {
+      color: $fg;
+      text-decoration: underline;
+    }
   }
 
   // Resource pack details
   .pack-details {
+    margin-top: -5rem;
     $dist: 8rem;
 
-    position: absolute;
+    // position: absolute;
     display: flex;
-    left: 25%;
-    margin-top: .1rem;
 
     p {
       font-size: 1.5rem;
-      width: 23rem;
-      margin-left: -40%;
+      width: 30rem;
+
+      .old-description {
+        text-decoration: line-through;
+        opacity: 50%;
+      }
+    }
+  }
+  .download {
+    border-top: $accent-bg 0.5rem solid;
+    width: 40rem;
+
+    margin-top: 2rem;
+
+    // Button/Link
+    .download-button-container {
+      font-size: 3rem;
+      width: 21rem;
+      color: $bg;
+
+      .download-button {
+        background: $logo-fg;
+        font-weight: bold;
+        text-decoration: none;
+        padding-right: 1rem;
+      }
+
+      .version {
+        text-decoration: none;;
+        background: $accent-orange;
+        padding-left: 0.5rem;
+        padding-right: 0.4rem;
+      }
     }
 
-    .download {
-      margin-top: 2rem;
-      text-align: center;
-      margin-left: 40%;
-
-      // Button/Link
-      a {
-        text-decoration: inherit;
-        background: $logo-fg;
-        color: $bg;
-        font-size: 3rem;
-      }
-
-      // Version
-      h2 {
-        margin-top: -0.1rem;
-        color: $project-highlight;
-        font-size: 2.3rem;
-      }
+    .description {
+      color: $accent-yellow;
+      font-size: 1.5rem;
+      width: 23rem;
     }
   }
 }
